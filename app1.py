@@ -2,8 +2,8 @@ while True:
     import os
     import csv
 
-    f = open("/Users/krishivchawla/Desktop/points.csv", "r", newline='')
-    f2 = open("/Users/krishivchawla/Desktop/points1.csv", "a", newline='')
+    f = open("points.csv", "r", newline='')
+    f2 = open("points1.csv", "a", newline='')
     r = csv.reader(f)
     w2 = csv.writer(f2)
     roll = input("enter last four digit for roll no.:")
@@ -17,8 +17,8 @@ while True:
             w2.writerow(i)
     f.close()
     f2.close()
-    if os.path.isfile("/Users/krishivchawla/Desktop/points.csv"):
-        os.remove("/Users/krishivchawla/Desktop/points.csv")
-    if os.path.isfile("/Users/krishivchawla/Desktop/points1.csv"):
-        os.rename("/Users/krishivchawla/Desktop/points1.csv",
-                  "/Users/krishivchawla/Desktop/points.csv")
+    if os.path.isfile("points.csv"):
+        os.remove("points.csv")
+    if os.path.isfile("points1.csv"):
+        os.rename("points1.csv",
+                  "points.csv")
